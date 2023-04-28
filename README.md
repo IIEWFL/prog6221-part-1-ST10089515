@@ -1,4 +1,5 @@
-# prog6221-part-1-ST10089515 NB: CODE IS SAVED ON THE MASTER NOT MAIN BRANCH 
+# Prog6221-part-1-ST10089515 
+# NB: CODE IS SAVED ON THE MASTER NOT MAIN BRANCH 
 The Recipe class contains properties for the number of ingredients and steps, as well as two lists to store the actual ingredients and steps. It also has methods to add ingredients and steps, display the recipe, scale the recipe by a given factor, reset the quantities of the ingredients, and clear the recipe.
 
 The Ingredient class has properties for the name, quantity, unit, original quantity, and meal of an ingredient.
