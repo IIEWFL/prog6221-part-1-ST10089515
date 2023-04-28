@@ -101,7 +101,7 @@ class Program
 
         Console.WriteLine("Enter meal name");
         string meal = Console.ReadLine();
-      //exception handling 
+        //exception handling 
         try
         {
             Console.Write("Enter the number of ingredients: ");
@@ -121,7 +121,8 @@ class Program
 
         }
 
-        catch (FormatException e) {
+        catch (FormatException e)
+        {
 
             Console.WriteLine("Please enter a number e.g. 5");
 
@@ -145,7 +146,8 @@ class Program
                 recipe.AddStep(description);
             }
         }
-        catch (FormatException e) {
+        catch (FormatException e)
+        {
 
             Console.WriteLine("Please enter an integer ");
 
