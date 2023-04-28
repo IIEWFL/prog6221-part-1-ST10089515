@@ -159,7 +159,7 @@ class Program
         Console.WriteLine("\nRecipe:" + meal);
         recipe.DisplayRecipe();
 
-        // Scale the recipe ta a factor 
+        // Scale the recipe ta a factor to half - double - or triple 
         Console.Write("\nEnter a scaling factor (0.5, 2, 3): ");
         double factor = double.Parse(Console.ReadLine());
 
