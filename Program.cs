@@ -101,22 +101,35 @@ class Program
 
         Console.WriteLine("Enter meal name");
         string meal = Console.ReadLine();
-        Console.Write("Enter the number of ingredients: ");
-        int numIngredients = int.Parse(Console.ReadLine());
-        recipe.NumIngredients = numIngredients;
-
-        for (int i = 0; i < numIngredients; i++)
+      //exception handling 
+        try
         {
-            Console.WriteLine("\nNumber Of Ingredient {0}", i + 1);
-            Console.Write("Name Of Ingredients: ");
-            string name = Console.ReadLine();
-            Console.Write("Quantity Of Each Ingredient: ");
-            double quantity = double.Parse(Console.ReadLine());
-            Console.Write("Unit Of Measurement: ");
-            string unit = Console.ReadLine();
-            recipe.AddIngredient(name, quantity, unit, meal);
+            Console.Write("Enter the number of ingredients: ");
+            int numIngredients = int.Parse(Console.ReadLine());
+            recipe.NumIngredients = numIngredients;
+            for (int i = 0; i < numIngredients; i++)
+            {
+                Console.WriteLine("\nNumber Of Ingredient {0}", i + 1);
+                Console.Write("Name Of Ingredients: ");
+                string name = Console.ReadLine();
+                Console.Write("Quantity Of Each Ingredient: ");
+                double quantity = double.Parse(Console.ReadLine());
+                Console.Write("Unit Of Measurement: ");
+                string unit = Console.ReadLine();
+                recipe.AddIngredient(name, quantity, unit, meal);
+            }
+
         }
 
+        catch (FormatException e) {
+
+            Console.WriteLine("Please enter a number e.g. 5");
+
+
+
+        }
+
+        
         // Get number of steps and add them to the recipe
         Console.Write("\nEnter the number of steps: ");
         int numSteps = int.Parse(Console.ReadLine());
