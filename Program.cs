@@ -129,18 +129,28 @@ class Program
 
         }
 
-        
-        // Get number of steps and add them to the recipe
-        Console.Write("\nEnter the number of steps: ");
-        int numSteps = int.Parse(Console.ReadLine());
-        recipe.NumSteps = numSteps;
 
-        for (int i = 0; i < numSteps; i++)
+        // Get number of steps and add them to the recipe
+        try
         {
-            Console.WriteLine("\nStep {0}", i + 1);
-            Console.Write("Description: ");
-            string description = Console.ReadLine();
-            recipe.AddStep(description);
+            Console.Write("\nEnter the number of steps: ");
+            int numSteps = int.Parse(Console.ReadLine());
+            recipe.NumSteps = numSteps;
+
+            for (int i = 0; i < numSteps; i++)
+            {
+                Console.WriteLine("\nStep {0}", i + 1);
+                Console.Write("Description: ");
+                string description = Console.ReadLine();
+                recipe.AddStep(description);
+            }
+        }
+        catch (FormatException e) {
+
+            Console.WriteLine("Please enter an integer ");
+
+
+
         }
 
         // Display the recipe
